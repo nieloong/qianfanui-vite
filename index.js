@@ -7,7 +7,7 @@ const fs = require("fs")
 function deleteFolderRecursive(path) {
    if( fs.existsSync(path) ) {
        fs.readdirSync(path).forEach(function(file) {
-           const curPath = path "/" file;
+           const curPath = path + "/" + file;
            if(fs.statSync(curPath).isDirectory()) { // recurse
                deleteFolderRecursive(curPath);
            } else { // delete file
@@ -41,7 +41,7 @@ http.createServer(async (req, res) => {
   execSync(`git clone https://github.com/nieloong/${data.repository.name}.git ${projectDir}`,{
       stdio:'inherit',
   })
-  
+
   // 复制 Dockerfile 到项目目录
   fs.copyFileSync(path.resolve(`./Dockerfile`), path.resolve(projectDir,'./Dockerfile'))
 
