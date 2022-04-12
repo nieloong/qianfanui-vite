@@ -5,7 +5,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />20220408 -- 来米撒
+  <img alt="Vue logo" src="./assets/logo.png" />20220408 -+- 来米撒
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
